@@ -5,13 +5,15 @@
         private $description;
         private $price;
         private $quantity;
+        private $category;
         private $image;
 
-        public function __construct($name,$description,$price,$quantity,$image){
+        public function __construct($name,$description,$price,$quantity,$category,$image){
             $this->name = $name;
             $this->description = $description;
             $this->price = $price;
             $this->quantity = $quantity;
+            $this->category = $category;
             $this->image = $image;
         }
 
@@ -45,6 +47,12 @@
         }
         public function setQuantity($quantity){
             $this->quantity = $quantity;
+        }
+        public function getCategory(){
+            return $this->category;
+        }
+        public function setCategory($category){
+            $this->category = $category;
         }
 
         public function getImage(){

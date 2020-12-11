@@ -1,12 +1,12 @@
 <?PHP
-	include "config.php";
-	require_once 'Model/produit.php';
+	include "../config.php";
+	require_once '../Model/produit.php';
 
 	class produitC {
 		
 		function ajouterProduit($produit){
-			$sql="INSERT INTO products (name, description, price, quantity, image) 
-			VALUES (:name,:description,:price, :quantity, :image)";
+			$sql="INSERT INTO products (name, description, price, quantity, category, image) 
+			VALUES (:name,:description,:price, :quantity, :category, :image)";
 			$db = config::getConnexion();
 			try{
 				$query = $db->prepare($sql);
@@ -16,6 +16,7 @@
 					'description' => $produit->getDescription(),
 					'price' => $produit->getPrice(),
 					'quantity' => $produit->getQuantity(),
+					'category' => $produit->getCategory(),
 					'image' => $produit->getImage()
 				]);			
 			}
@@ -57,7 +58,7 @@
 						description = :description,
 						price = :price,
 						quantity = :quantity,
-						
+						category = :category,
 						image = :image
 					WHERE id = :id'
 				);
@@ -66,7 +67,7 @@
 					'description' => $produit->getDescription(),
 					'price' => $produit->getPrice(),
 					'quantity' => $produit->getQuantity(),
-					
+					'category' => $produit->getCategory(),
 					'image' => $produit->getImage(),
 					'id' => $id
 				]);
