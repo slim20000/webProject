@@ -17,6 +17,16 @@
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                 </a>
               </li>
+              <li class="treeview">
+                <a href="#">
+                <i class="fa fa-laptop"></i>
+                <span>Users management</span>
+                <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="viewusers.php"><i class="fa fa-angle-right"></i> View users</a></li>
+                </ul>
+              </li>
 			  <li class="treeview">
                 <a href="#">
                 <i class="fa fa-laptop"></i>
@@ -24,7 +34,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="addProduct.php"><i class="fa fa-angle-right"></i> Add products</a></li>
+                  <li><a href="addProduc.php"><i class="fa fa-angle-right"></i> Add products</a></li>
                   <li><a href="media.php"><i class="fa fa-angle-right"></i> Products available</a></li>
                   <li><a href="addCategory.php"><i class="fa fa-angle-right"></i> Add Category</a></li>
                 </ul>
