@@ -2,7 +2,7 @@
     include "../controller/UtilisateurC.php";
     include_once '../Model/Utilisateur.php';
 		
-extract($_POST);
+
 $utilisateurC = new UtilisateurC();
 $listeUsers=$utilisateurC->afficherUtilisateurs();
 $error = "";
@@ -99,7 +99,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <div class="main-page">
                     <h2 class="title1"> Liste of users</h2>
                     <div class="panel-body widget-shadow">
-                        <table class="table">
+                        <table class="table" id ="selectedColumn2"> 
                             <thead>
                                 <tr>
                                 <th>Id</th>
@@ -130,9 +130,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                                     </td>
                                     
                                     <td>
-                                    <form method="POST" action="viewusers.php?id=<?PHP echo $user['id']; ?>">
-                                            <button type="submit" class="btn btn-default" value="modify">Modify</button>
-                                        </form>
+                                   
+                                            <button type="submit" class="btn btn-default" value="modify"><a href="modifuser.php?id=<?PHP echo $user['id']; ?>"> Modifier </a></button></button>
+                                        
                                     </td>
         
                                     <td>
@@ -148,6 +148,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			                    ?>
                             </tbody>
                         </table>
+                        <div > 
+        <input type="text" class="buscar-txt" id="myInput2" onkeyup="myFunction2()" placeholder="Search for idc.."  title="Type in a name"/> 
+        <a class="buscar-btn"> <i class="fa fa-search"></i> </a>
+
+</div> 
                     </div>
                 </div>
             </div>
@@ -236,6 +241,27 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
         <!--//scrolling js-->
         <!-- Bootstrap Core JavaScript -->
         <script src="style/js/bootstrap.js"> </script>
+        <script>
+ function myFunction2() {
+                                        var input, filter, table, tr, td, i, txtValue;
+                                        input = document.getElementById("myInput2");
+                                        filter = input.value.toUpperCase();
+                                        table = document.getElementById("selectedColumn2");
+                                        tr = table.getElementsByTagName("tr");
+                                        for (i = 0; i < tr.length; i++) {
+                                            td = tr[i].getElementsByTagName("td")[0];
+                                            if (td) {
+                                                txtValue = td.textContent || td.innerText;
+                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                                    tr[i].style.display = "";
+                                                } else {
+                                                    tr[i].style.display = "none";
+                                                }
+                                            }       
+                                        }
+                                    }
+
+</script>
 </body>
 
 </html>

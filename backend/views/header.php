@@ -206,8 +206,23 @@
                                         <span class="prfil-img"><img src="style/images/2.jpg" alt=""> </span>
                                         <div class="user-name">
                                             <p>Admin Name</p>
-                                            <span>Administrator</span>
-                                        </div>
+                                                                                  <?php
+                                                                                  $sessionname="";
+                                                                                  if (!isset($_SESSION['sess_name'])) {
+    $sessionname= "" ;
+  } else {
+    $sessionname= $_SESSION['sess_name'];
+  }
+/*session is started if you don't write this line can't use $_Session  global variable*/
+
+/*session created*/
+
+
+/*session was getting*/
+?>
+                                            
+                                            <span><?php echo $sessionname;?></span>
+                                            </div>
                                         <i class="fa fa-angle-down lnr"></i>
                                         <i class="fa fa-angle-up lnr"></i>
                                         <div class="clearfix"></div>
@@ -217,7 +232,7 @@
                                     <li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li>
                                     <li> <a href="#"><i class="fa fa-user"></i> My Account</a> </li>
                                     <li> <a href="#"><i class="fa fa-suitcase"></i> Profile</a> </li>
-                                    <li> <a href="#"><i class="fa fa-sign-out"></i> Logout</a> </li>
+                                    <li> <a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a> </li>
                                 </ul>
                             </li>
                         </ul>

@@ -17,17 +17,19 @@ if (
         !empty($_POST["name"]) && 
         !empty($_POST["firstname"]) && 
         !empty($_POST["email"]) &&  
-        !empty($_POST["password"])
+        !empty($_POST["password"]) 
+       
     ) {
         $user = new Utilisateur(
             $_POST['name'],
             $_POST['firstname'], 
             $_POST['email'],
+            $_POST['name'],
             $_POST['password']
         );
         
         $utilisateurC->modifierUtilisateur($user, $_GET['id']);
-        header('refresh:5;url=viewusers.php');
+        header('Location:viewusers.php');
     }
     else
         $error = "Missing information";
@@ -126,14 +128,21 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                                             value="<?php echo $user['firstname']; ?>">
                                     </div>
                                     <div class="form-group">
+                                        <label>Password</label>
+                                        <input type="password" class="form-control" name="password" id="password"
+                                            value="<?php echo $user['password']; ?>">
+                                    </div>
+                                   
+                                    <div class="form-group">
                                         <label>Email</label>
                                         <input type="text" class="form-control" name="email" id="email"
                                             value="<?php echo $user['email']; ?>">
                                     </div>
                                     
                                     
+                                    
                                     <button type="submit" class="btn btn-default" value="modify"
-                                        onclick=" return verif_edit();">Modify</button>
+                                    >Modify</button>
                                 </form>
 
                             </div>

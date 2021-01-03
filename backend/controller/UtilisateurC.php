@@ -83,7 +83,7 @@ require_once "../config.php";
 				'password' => $Utilisateur->getPassword(),
 				'id' => $id
 			]);
-			echo $query->rowCount() . " records UPDATED successfully <br>";
+		 
 		} catch (PDOException $e) {
 			$e->getMessage();
 		}

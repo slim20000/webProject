@@ -43,6 +43,37 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <!--//Metis Menu -->
 
 </head> 
+<?php
+     include "../controller/ManagerC.php";
+	 include_once '../Model/Manager.php';
+	
+
+?>
+<?php
+extract($_POST);
+$msg = ""; 
+if(isset($_POST['SubmitBtn'])) {
+  $firstname = trim($_POST['firstname']);
+  $lastname = trim($_POST['lastname']);
+  $email = trim($_POST['email']);
+  $gender = trim($_POST['gender']);
+  $password= trim($_POST['password']);
+  $confirmpassword= trim($_POST['confirmpassword']);
+  if($email != "" && $password != "" && $lastname != "" && $firstname != "" && $password== $confirmpassword ) {
+    try {
+        $manager = new Manager($firstname,$lastname,$gender, $email,$password,$confirmpassword);
+        $managerC = new ManagerC();
+        $managerC->ajouterManager($manager);
+        header ("Location: login.php?status=success");
+        
+    } catch (PDOException $e) {
+      echo "Error : ".$e->getMessage();
+    }
+  } else {
+    $msg = "Both fields are required!";
+  }
+}
+?>
 <body class="cbp-spmenu-push">
 	<div class="main-content">
 	<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
@@ -58,15 +89,15 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<h5>Personal Information :</h5>
 				<form action="#" method="post">
 					<div class="sign-u">
-								<input type="text" name="firstname" placeholder="First Name" required="">
+								<input type="text" name="firstname" id="firstname" placeholder="First Name" required="">
 						<div class="clearfix"> </div>
 					</div>
 					<div class="sign-u">
-								<input type="text" placeholder="Last Name" required="">
+								<input type="text" name="lastname" id="lastname" placeholder="Last Name" required="">
 						<div class="clearfix"> </div>
 					</div>
 					<div class="sign-u">
-								<input type="email" placeholder="Email Address" required="">
+								<input type="email" name="email" id="email" placeholder="Email Address" required="">
 						<div class="clearfix"> </div>
 					</div>
 					<div class="sign-u">
@@ -75,11 +106,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<div class="sign-up2">
 							<label>
-								<input type="radio" name="Gender" required="">
+								<input type="radio" name="gender" id ="gender" required="" value ="Male" >
 								Male
 							</label>
 							<label>
-								<input type="radio" name="Gender" required="">
+								<input type="radio" name="gender" id ="gender" required="" value ="female" >
 								Female
 							</label>
 						</div>
@@ -87,20 +118,20 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<h6>Login Information :</h6>
 					<div class="sign-u">
-								<input type="password" placeholder="Password" required="">
+								<input type="password" name="password" id="password"  placeholder="Password" required="">
 						<div class="clearfix"> </div>
 					</div>
 					<div class="sign-u">
-								<input type="password" placeholder="Confirm Password" required="">
+								<input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password" required="">
 						</div>
 						<div class="clearfix"> </div>
 					<div class="sub_home">
-							<input type="submit" value="Submit">
+							<input type="submit" name="SubmitBtn" id="SubmitBtn" value="Submit">
 						<div class="clearfix"> </div>
 					</div>
 					<div class="registration">
 						Already Registered.
-						<a class="" href="login.html">
+						<a class="" href="login.php">
 							Login
 						</a>
 					</div>
