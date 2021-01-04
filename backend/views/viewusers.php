@@ -105,6 +105,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                                 <th>Id</th>
 				<th>Name</th>
 				<th>Firstname</th>
+                <th>Login</th>
 				<th>Email</th>
                                     <th>Modify user</th>
                                     <th>Delete user</th>
@@ -124,6 +125,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                                     </td>
                                     <td>
                                         <?PHP echo $user['firstname']; ?>
+                                    </td>
+                                    <td>
+                                        <?PHP echo $user['login']; ?>
                                     </td>
                                     <td>
                                         <?PHP echo $user['email']; ?>
