@@ -14,14 +14,14 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="style/css1/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="style/css1/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="style/css1/flaticon.css" type="text/css">
-    <link rel="stylesheet" href="style/css1/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="style/css1/barfiller.css" type="text/css">
-    <link rel="stylesheet" href="style/css1/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="style/css1/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="style/css1/style.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
 <body>
@@ -32,7 +32,7 @@
 
  <!-- Offcanvas Menu Section Begin -->
  <?php
- include ('mainHeader.php');
+ include ('header.php');
   ?><!-- Header End -->
 
     <!-- Breadcrumb Section Begin -->
@@ -69,24 +69,32 @@
                     <div class="cs-item">
                         <span class="flaticon-034-stationary-bike"></span>
                         <h4>Modern equipment</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            dolore facilisis.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item">
                         <span class="flaticon-033-juice"></span>
                         <h4>Healthy nutrition plan</h4>
+                        <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                            facilisis.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item">
                         <span class="flaticon-002-dumbell"></span>
                         <h4>Proffesponal training plan</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            dolore facilisis.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item">
                         <span class="flaticon-014-heart-beat"></span>
                         <h4>Unique to your needs</h4>
+                        <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                            facilisis.</p>
                     </div>
                 </div>
             </div>
@@ -111,6 +119,10 @@
                             <h2>What we have done</h2>
                         </div>
                         <div class="at-desc">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+                                viverra maecenas accumsan lacus vel facilisis. aliquip ex ea commodo consequat sit amet,
+                                consectetur adipiscing elit, sed do eiusmod tempor.</p>
                         </div>
                         <div class="about-bar">
                             <div class="ab-item">
@@ -224,7 +236,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="bs-text">
-                        <h2>register now to get more deals</h2>
+                        <h2>registration now to get more deals</h2>
                         <div class="bt-tips">Where health, beauty and fitness meet.</div>
                         <a href="#" class="primary-btn  btn-normal">Appointment</a>
                     </div>
@@ -234,6 +246,65 @@
     </section>
     <!-- Banner Section End -->
 
+    <!-- Testimonial Section Begin -->
+    <section class="testimonial-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Testimonial</span>
+                        <h2>Our cilent say</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="ts_slider owl-carousel">
+                <div class="ts_item">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <div class="ti_pic">
+                                <img src="img/testimonial/testimonial-1.jpg" alt="">
+                            </div>
+                            <div class="ti_text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt<br /> ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+                                    gravida. Risus commodo<br /> viverra maecenas accumsan lacus vel facilisis.</p>
+                                <h5>Marshmello Gomez</h5>
+                                <div class="tt-rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ts_item">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <div class="ti_pic">
+                                <img src="img/testimonial/testimonial-2.jpg" alt="">
+                            </div>
+                            <div class="ti_text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt<br /> ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+                                    gravida. Risus commodo<br /> viverra maecenas accumsan lacus vel facilisis.</p>
+                                <h5>Marshmello Gomez</h5>
+                                <div class="tt-rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Testimonial Section End -->
 
     <!-- Get In Touch Section Begin -->
@@ -284,14 +355,14 @@
     <!-- Search model end -->
 
     <!-- Js Plugins -->
-    <script src="style/js/jquery-3.3.1.min.js"></script>
-    <script src="style/js/bootstrap.min.js"></script>
-    <script src="style/js/jquery.magnific-popup.min.js"></script>
-    <script src="style/js/masonry.pkgd.min.js"></script>
-    <script src="style/js/jquery.barfiller.js"></script>
-    <script src="style/js/jquery.slicknav.js"></script>
-    <script src="style/js/owl.carousel.min.js"></script>
-    <script src="style/js/main.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.barfiller.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
 
 
 </body>
