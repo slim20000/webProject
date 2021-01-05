@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <h1><a class="navbar-brand" href="index.php"><span class="fa fa-area-chart"></span> Admin<span class="dashboard_text">Dashboard</span></a></h1>
+            <h1><a class="navbar-brand" href="index.php"><span class="fa fa-area-chart"></span> Glance<span class="dashboard_text">Design dashboard</span></a></h1>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="sidebar-menu">
@@ -25,8 +25,7 @@
                 </a>
                 <ul class="treeview-menu">
                   <li><a href="addProduct.php"><i class="fa fa-angle-right"></i> Add products</a></li>
-                  <li><a href="media.php"><i class="fa fa-angle-right"></i> Products available</a></li>
-                  <li><a href="addCategory.php"><i class="fa fa-angle-right"></i> Add Category</a></li>
+                  <li><a href="media.php"><i class="fa fa-angle-right"></i> Products available/</a></li>
                 </ul>
               </li>
               <li class="treeview">
@@ -58,12 +57,12 @@
               </li>
               <li class="treeview">
                 <a href="#">
-                <i class="fa fa-edit"></i> <span>Forms</span>
+                <i class="fa fa-edit"></i> <span>PLANNING</span>
                 <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="forms.php"><i class="fa fa-angle-right"></i> General Forms</a></li>
-                  <li><a href="validation.php"><i class="fa fa-angle-right"></i> Form Validations</a></li>
+                  <li><a href="http://localhost/ttms/files/"><i class="fa fa-angle-right"></i> Parametres planning</a></li>
+                  <li><a href="http://localhost/image-upload-php-and-mysql-main/index.php"><i class="fa fa-angle-right"></i> ajouter un emploie de temps</a></li>
                 </ul>
               </li>
               <li class="treeview">
