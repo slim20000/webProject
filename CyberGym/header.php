@@ -38,9 +38,11 @@
                         <li><a href="./store/views/shop.php">Our Store</a></li>
                         <li><a href="./gallery.php">Gallery</a></li>
                         <li><a href="./blog.php">Our blog</a></li>
+                        <li><a href="./index.php">Home</a></li>
                     </ul>
                 </li>
                 <li><a href="./contact.php">Contact</a></li>
+                <li><a href="./http://localhost/image-upload-php-and-mysql-main/index.php">PLANNING</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -83,6 +85,7 @@
                                 </ul>
                             </li>
                             <li><a href="./contact.php">Contact</a></li>
+                            <li><a href="http://localhost/image-upload-php-and-mysql-main/view.php">PLANNING</a></li>
                         </ul>
                     </nav>
                 </div>
