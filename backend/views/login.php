@@ -37,6 +37,41 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <!--//Metis Menu -->
 
 </head> 
+<?php 
+session_start();
+include "../controller/ManagerC.php";
+include_once '../Model/Manager.php';
+?>
+<?php
+$msg = ""; 
+if(isset($_POST['submitBtnLogin'])) {
+  $email = trim($_POST['email']);
+  $password = trim($_POST['password']);
+  if($email != "" && $password != "") { 
+	try {
+        $managerC = new ManagerC();
+		$ret=$managerC->login($email, $password);
+		if ($ret != null){
+
+		$_SESSION['sess_user_id']   = $ret['id'];
+        $_SESSION['sess_user_name'] = $ret['email'];
+		$_SESSION['sess_name'] = $ret['email'];
+	
+       
+		header ("Location: index.php?status=success");
+	}
+	else {$msg = "Login failed !";}
+        
+    } catch (PDOException $e) {
+      echo "Error : ".$e->getMessage();
+    }
+  } else {
+    $msg = "Both fields are required!";
+  }
+
+    
+}
+?>
 <body class="cbp-spmenu-push">
 <div class="main-content">
 	<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
@@ -60,10 +95,10 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="clearfix"> </div>
 							</div>
-							<input type="submit" name="Sign In" value="Sign In">
+							<input type="submit" name="submitBtnLogin" value="Sign In" id ="submitBtnLogin">
 							<div class="registration">
 								Don't have an account ?
-								<a class="" href="signup.html">
+								<a class="" href="signup.php">
 									Create an account
 								</a>
 							</div>
