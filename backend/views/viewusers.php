@@ -153,7 +153,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                             </tbody>
                         </table>
                         <div > 
-        <input type="text" class="buscar-txt" id="myInput2" onkeyup="myFunction2()" placeholder="Search for idc.."  title="Type in a name"/> 
+        <input type="text" class="buscar-txt" name="myInput2" onkeyup="myFunction2()" placeholder="Search for name.."  title="Type in a name"/> 
         <a class="buscar-btn"> <i class="fa fa-search"></i> </a>
 
 </div> 
